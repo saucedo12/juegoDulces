@@ -79,7 +79,6 @@ function colorTituloJuego(tittle) {
 }
 
 
-
 /////////////// Obtiene números aleatorios////////////////
 function getRandomInt(min, max) {
 	min = Math.ceil(min);
@@ -206,17 +205,11 @@ function rowValidation() {
 	// Itera sobre cada fila de dulces
 	for (var j = 0; j < 6; j++) {
 		var counter = 0;
-		// Salvará la posición del caramelo
 		var candyPosition = [];
-		// Salvará la posición de dulces extra
 		var extraCandyPosition = [];
-		// Crea una fila de dulces
 		var candyRow = candyRows(j);
-		// Toma el primer objeto de Candy Row
 		var comparisonValue = candyRow[0];
-		// Se establecerá a true si hay una brecha entre las "líneas de dulces"
 		var gap = false;
-		// Itera sobre la matriz de candyRow
 		for (var i = 1; i < candyRow.length; i++) {
 			// El src attr de comparación Valor
 			var srcComparison = comparisonValue.attr('src');
@@ -318,6 +311,7 @@ function addDulcesEvents() {
 		droppable: 'img',
 		revert: true,
 		revertDuration: 500,
+
 	});
 	$('img').droppable({
 		drop: moverDulce
@@ -406,3 +400,5 @@ function deletesDulces() {
 		}
 	})
 }
+
+
